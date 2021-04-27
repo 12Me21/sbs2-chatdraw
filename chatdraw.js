@@ -2,8 +2,6 @@
 //randomouscrap98@aol.com
 //-Yo, check it out. Drawing. In chat. 
 
-//Make sure there's at least SOMETHING there. It won't log, but it won't throw
-//errors either (I think).
 var LocalChatDraw = (function() {
 
 	//The chatdraw canvas's expected width and height
@@ -963,7 +961,8 @@ var LocalChatDraw = (function() {
 	//Send the current drawing to the chat.
 	var sendDrawing = function(animationLink)
 	{
-		try
+		$sendDrawing.click(); //hack!
+		/*try
 		{
 			var message = animateFrames.GetFrame().ToString();
 			if(animationLink) message = "(" + animationLink + ")" + message;
@@ -972,7 +971,7 @@ var LocalChatDraw = (function() {
 		catch(ex)
 		{
 			LogSystem.RootLogger.log("Error while sending drawing: " + ex);
-		}
+		}*/
 	};
 
 	var sendDrawing2 = function()
